@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字体使用</title>
+    <style>
+        @font-face {
+            /* 声明字体 */
+            font-family: 'icomoon';
+            /* 问号后面兼容IE */
+            src: url('fonts/icomoon.eot?7kkyc2');
+            src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+                url('fonts/icomoon.woff?7kkyc2') format('woff'),
+                url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            /* 倾斜字体变正常 */
+            font-style: normal;
+        }
+        span {
+            /** 给盒子使用字体 */
+            font-family: "icomoon";
+            /* 指定图标大小 */
+            font-size: 100px;
+            /* 指定图标字体 */
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <span></span>
+    
+</body>
+
+</html>

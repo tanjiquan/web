@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝轮播(定位)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .taobao {
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            position: relative;
+        }
+        .taobao a {
+            width: 20px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+        }
+        .left {
+            left: 0;
+            background: url(images/left.png) no-repeat top left;
+            background-size: 20px 30px;
+        }
+        .right {
+            right: 0;
+            background: url(images/right.png) no-repeat top left;
+            background-size: 20px 30px;
+        }
+        .taobao ul {
+            width: 60px;
+            height: 13px;
+            background: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -35px;
+            border-radius: 5px;
+        }
+        .taobao li {
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            float: left;
+            margin: 3px;
+            border-radius: 5px;
+        }
+        .taobao .current {
+            background-color: #f40;
+        }
+
+        .p-ps {
+            width: 1500px;
+            height: 300px;
+            margin-left: 100px;
+        }
+        .ps {
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            float: left;
+            margin-left: -1px;  /** 防止边框重合 */
+        }
+        .ps:hover {
+            border: 1px solid #f40;
+            position: relative;  /** 相对定位比标准流高一级，浮在上面的*/
+        }
+
+        .p-z-index {
+            width: 1500px;
+            height: 300px;
+            margin-left: 100px;
+        }
+        .z-index {
+            width: 150px;
+            height: 200px;
+            border: 1px solid #ccc;
+            float: left;
+            margin-left: -1px;  /** 防止边框重合 */
+            position: relative; /** 原来已经有 相对定位 */
+        }
+        .z-index:hover {
+            border: 1px solid #f40;
+            /* position: relative;  相对定位比标准流高一级，浮在上面的 */
+            z-index: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="taobao">
+        <img src="images/taobao.png" width="500px" height="300px">
+        <a href="javascript:;" class="left"></a>
+        <a href="javascript:;" class="right"></a>
+        <ul>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- 鼠标滑动 显示边框，并且边框不重叠 -->
+    <div class="p-ps">
+        <div class="ps"></div>
+        <div class="ps"></div>
+        <div class="ps"></div>
+        <div class="ps"></div>        
+    </div>
+    
+    <div class="p-z-index">
+        <div class="z-index"></div>
+        <div class="z-index"></div>
+        <div class="z-index"></div>
+        <div class="z-index"></div>
+    </div>
+
+
+</body>
+</html>

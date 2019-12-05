@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信导航栏(滑动门)</title>
+    <style>
+        body {
+            background: url(images/weixin_nav_bg.jpg) repeat-x;
+        }
+        .nav li {
+            list-style: none;
+            float: left;
+            margin-left: 20px;
+        }
+        .nav a {
+            /** 给了行高 不用给高，会撑开盒子 */
+            /* height: 33px; */
+            display: inline-block;
+            /** 行内元素没有宽高，要转化为行内块元素 */
+            background: url(images/weixin_nav_tu.png) no-repeat;
+            color: #fff;
+            text-decoration: none;
+            line-height: 33px;
+            padding-left: 15px;
+        }
+        .nav span {
+            display: inline-block;
+            height: 33px;
+            background: url(images/weixin_nav_tu.png) no-repeat right;
+            padding-right: 15px;
+        }
+        .nav a:hover, .nav a:hover span{ /** 鼠标经过之后， span 凹下去 */
+            background-image: url(images/weixin_nav_ao.png);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">
+                <span>首页</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>帮助与反馈</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>公众平台</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>开放平台</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>微信支付</span>
+            </a>
+        </li>
+    </ul>
+
+</body>
+
+</html>

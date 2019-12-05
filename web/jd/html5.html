@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 新特性</title>
+</head>
+<body>
+    <br/> datalist 标签 <br/>
+    <input type="text" list="start">
+    <datalist id="start">
+        <option value="张三"></option>
+        <option value="李四"></option>
+        <option value="王五"></option>
+        <option value="王小红"></option>
+    </datalist>
+
+    <br/> <br/> fieldset 标签  <br/>
+    <fieldset>
+        <legend>登陆</legend>
+        用户名： <input type="text">  <br/>
+        密 码： <input type="text">
+    </fieldset>
+
+    <br/> <br/> 表单属性 <br/>
+    <form action="">
+        用户名： <input type="text" placeholder="请输入用户名" autofocus="autofocus"> <br/>
+        上传图像：<input type="file" multiple autocomplete="" required><br/>
+        alt + S 键： <input type="text" required accesskey="s">
+        <input type="submit" value="提交">
+    </form>
+
+    <br/> <br/> iframe 第三方插入视频 <br/>
+    <iframe height=498 width=510 src='http://player.youku.com/embed/XNDM5OTY0NTY4MA==' frameborder=0 'allowfullscreen'></iframe>
+
+    <br/> <br/> audio 插入音频 <br/>
+    <audio autoplay controls loop>
+        <source srcset="xx.mp3"/>
+        <source srcset="xx.ogg"/>
+        你的播放器过低
+    </audio>
+
+    <br/> <br/> video 插入视频 <br/>
+    <video autoplay controls loop>
+        <source srcset="xx.mp4"/>
+        <source srcset="xx.avi"/>
+        你的播放器过低
+    </video>
+</body>
+</html>

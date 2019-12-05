@@ -1,0 +1,544 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?a4rks');
+    src:  url('../fonts/icomoon.eot?a4rks#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?a4rks') format('truetype'),
+      url('../fonts/icomoon.woff?a4rks') format('woff'),
+      url('../fonts/icomoon.svg?a4rks#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+/* 版心 */
+* {
+    margin: 0;
+    padding: 0;
+}
+.w {
+    width: 990px;
+    margin: auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.style-red {
+    color: #f10215!important;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input button {
+    padding: 0;
+    border: 0;
+}
+/* 取出底侧缝隙  图片和文字基线对齐 */
+.img {
+    vertical-align: top;
+}
+body {
+    background-color: #f6f6f6;
+}
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;  /** 这句话可以发出BFC  BFC可以清除浮动 */
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;  /** css hack 写法 */
+}
+
+/* JD 顶部 */
+/* 顶部 */
+.J_event {
+    height: 80px;
+    background-color: #fc9224;
+}
+/* 顶部背景 */
+.J_event a {
+    display: block;
+    height: 100%;
+    background: url(../images/top.png) no-repeat;
+    position: relative;
+}
+.J_event a i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-family: "icomoon";
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4)
+}
+/* JD 顶部 */
+
+/* jd 快速导航栏  */
+.shortcut {
+    height: 30px;
+    line-height: 30px; /* 行高可继承 */
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #dddd;
+    color: #9D9D9D;
+    font-size: 12PX;
+}
+.shortcut a:hover {
+    color: #c81623;
+}
+.shortcut .fl li {
+    height: 30px;
+    overflow: hidden; /* 图标超出， 多出了隐藏 */
+}
+.shortcut .location {
+    font-family: "icomoon";
+    font-size: 14px;
+    font-style: normal;
+}
+.shortcut a {
+    color: #9D9D9D;
+    font-size: 12PX;
+    text-decoration: none;
+}
+/* .shortcut .fl li {
+    margin-left: 200px;
+} */
+.shortcut .fr li {
+    float: left;
+}
+/* 短线 分割线*/
+.spacer {
+     width: 1px;
+     height: 10px;
+     background-color: #ccc;
+     margin: 10px 10px 0;
+}
+.dropdown {
+    padding-right: 15px;
+    position: relative;
+}
+.dropdown i {
+    font-family: "icomoon";
+    font-style: normal;
+    position: absolute;
+    right: -2px;
+    top: 1px;
+}
+.qrcode {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    position: absolute;
+    left: -8px;
+    top: 35px;
+}
+/* jd 快速导航栏  */
+
+
+/* header */
+.header {
+    height: 140px;
+    background-color: #fff;
+}
+.header-in {
+    height: 140px;
+    position: relative;
+    background-color: #fff;
+}
+/* logo */
+.logo {
+    width: 190px;
+    height: 140px;
+    position: absolute;
+    /* box-shadow: 0 -12px 10px rgb(0, 0, 0, 0.2); */
+    top: 0;
+    left: 0;
+}
+.logo h1 {
+    /* h1  有没边距 */
+    margin: 0;
+}
+.logo h1 a {
+    /* 转化为块级元素， 不能用行内，行内不能指定宽高 */
+    display: block;
+    width: 190px;
+    height: 140px;
+    background: url(../images/jd_logo.png) no-repeat;
+    background-size: 190px 140px;
+    /* 让 京东 两个字在网页中存在，但不显示，为了被搜索引擎查出 */
+    text-indent: -9999px;
+    overflow: hidden;
+}
+/* search 搜索框 */
+.search {
+    width: 492px;
+    height: 36px;
+    background-color: blue;
+    position: absolute;
+    top: 25px;
+    left: 260px;
+}
+.search input {
+    width: 433px;
+    height: 32px;
+    border: 2px solid #f10215;
+    font-size: 12px;
+    padding-left: 5px ;
+    /* 取消蓝色边框 */
+    outline: none;
+    color: #989898;
+    float: left;
+}
+.search button {
+    width: 50px;
+    height: 36px;
+    background-color: #f10215;
+    border: 2px solid #f10215;
+    float: left;
+    cursor: pointer;
+    outline: none;
+}
+.search i {
+    font-family: "icomoon";
+    color: #fff;
+    font-style: normal;
+    font-size: 16px;
+}
+.search em {
+    font-family: "icomoon";
+    color: #fff;
+    font-style: normal;
+    font-size: 16px;
+    color: #989898;
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    cursor: pointer;
+}
+.search em:hover {
+    color: #f10215;
+}
+/* search 搜索框 */
+
+/* 热词部分 */
+.hotwords {
+    position: absolute;
+    top: 63px;
+    left: 260px;
+}
+.hotwords a {
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+    margin-right: 6px;
+}
+.hotwords a:hover {
+    color: #f10215;
+}
+/* 热词部分 */
+
+/* 我的购物车部分 */
+.myCar {
+    width: 130px;
+    height: 32px;
+    border: 2px solid #ccc;
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    text-align: center;
+    line-height: 32px;
+}
+.myCar a {
+    font-size: 14px;
+    color: #f10215;
+    text-decoration: none;
+}
+.myCar i {
+    font-family: "icomoon";
+    color: #f10215;
+    font-style: normal;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.myCar s {
+    position: absolute;
+    top: 3px;
+    left: 22px;
+    text-decoration: none;
+    background-color: #f10215;
+    color: #fff;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 0 3px;
+    border-radius: 10px;
+}
+/* 我的购物车部分 */
+
+/* 导航栏部分 */
+.navtems {
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
+}
+.navtems ul {
+    float: left;
+    display: block;
+}
+.navtems ul li {
+    float: left;
+    margin-left: 20px;
+}
+.navtems ul li a {
+    font-size: 16px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    display: block;
+}
+.navtems ul li a:hover {
+    color: #f10215;
+}
+.navtems .spacer {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+/* 导航栏部分 */
+
+/* header */
+
+/* footer */
+.footer {
+    height: 560px;
+    background-color: #EAEAEA;
+}
+/* 底部 服务模块 */
+.footer-service {
+    border-bottom: 1px solid #DEDEDE;
+}
+.service-inner {
+    /* 上下30px  左右 0 px */
+    padding: 30px 0; 
+}
+.service-inner li {
+    float: left;
+    width: 247px;
+    height: 42px;
+}
+.service-unit {
+    padding-left: 45px;
+    width: 180px;
+    margin: 0 auto;
+    position: relative;
+}
+.service-unit h5 {
+    width: 36px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/jd_footer1.png) no-repeat;
+    background-size: 113px 86.5px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.service-unit p {
+    line-height: 42px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+}
+.service-unit .duo {
+    background-position: 0 0;
+}
+.service-unit .kuai {
+    /* 代码被横向划掉了， 权重不够 所以要用 .service-unit .kuai  不是 .kuai*/
+    background-position: -38.5px 0;
+}
+.service-unit .hao {
+    background-position: -77px 0;
+}
+.service-unit .sheng {
+    background-position: 0 -44.5px;
+}
+
+/* help 模块 */
+.footer-help {
+    height: 180px;
+    padding-top: 20px;
+}
+.footer-help dl {
+    /*  */
+    float: left;
+    width: 158px;
+}
+.footer-help dt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    height: 30px;
+}
+.footer-help dd {
+    height: 22px;
+}
+.footer-help dd a {
+    color: #727272;
+    font-size: 12px;
+}
+.footer-help dd a:hover {
+    color: #f10215;
+}
+.footer-help .help-cover {
+    float: right;
+    width: 200px;
+    height: 150px;
+    background: url(../images/jd_footer.png) no-repeat;
+}
+.help-cover dt {
+    text-align: center;
+}
+.help-cover .help-cover-info {
+    width: 180px;
+    height: 54px;
+    color: #727272;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.help-cover-more {
+    text-align: right;
+    padding-right: 25px;
+}
+/* help 模块 */
+
+/* 版权模块 */
+.footer-copyright {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    text-align: center;
+}
+.copyright-links a {
+    color: #727272;
+    font-size: 12px;
+}
+.copyright-links a:hover {
+    color: #f10215;
+}
+.copyright-links span {
+    color: #D4CDCD;
+    font-size: 12px;
+    margin: 0 2px;
+}
+
+.copyright-info {
+    font-size: 12px;
+    line-height: 20px;
+    color: #9E9E9B;
+    text-align: center;
+    margin-top: 15px;
+}
+.copyright-info a {
+    color: #9E9E9B;
+}
+.copyright-info a:hover {
+    color: #f10215;
+}
+.copyright-info span {
+    color: #9E9E9B;
+    margin: 0 10px;
+}
+
+.copyright-inter a {
+    color: #999;
+    font-size: 12px;
+}
+.copyright-inter span {
+    color: #999;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.copyright-inter i {
+    background: url(../images/jd_footer1.png) no-repeat;
+    background-size: 113px 86.5px;
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+.copyright-inter .ico-global {
+    background-position: -38.5px -44.5px;
+}
+.copyright-inter .ico-rissia {
+    background-position: -56px -44.5px;
+}
+.copyright-inter .ico-indonesia {
+    background-position: -73.5px -44.5px;
+}
+.copyright-inter .ico-spain {
+    background-position: -38.5px -59px;
+}
+.copyright-inter .ico-thailand {
+    background-position: -91px -44.5px;
+}
+
+.copyright-subsites {
+    margin-top: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.copyright-subsites a {
+    color: #999;
+}
+.copyright-subsites a:hover {
+    color: #f10215;
+}
+.copyright-subsites .subsites-split {
+    margin: 0 10px;
+}
+.copyright-auth {
+    margin-top: 25px;
+}
+.copyright-auth a {
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 103px;
+    height: 32px;
+    margin: 0 3px;
+    display: inline-block;
+    background: url(../images/jd_footer.png) no-repeat;
+}
+.copyright-auth .auth1 {
+    background-position: -205px -111px;
+}
+.copyright-auth .auth2 {
+    background-position: -205px -74px;
+}
+.copyright-auth .auth3 {
+    background-position: -205px -37px;
+}
+.copyright-auth .auth4 {
+    background-position: -205px 0;
+}
+.copyright-auth .auth5 {
+    background-position: 0 -155px;
+}
+/* 版权模块 */
+
+/* footer */

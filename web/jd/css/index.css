@@ -1,0 +1,312 @@
+.fs {
+    height: 480px;
+    position: relative;
+    margin-top: 10px;
+}
+.fs-inner {
+    height: 480px;
+    /* 都是定位  并且让版心压着 act 活动 模块的图片， 定位层级最高，标准流抵不过定位， 浮动也压不过定位 */
+    /* 所有 版心也改成定位，并且把 z-index改成更高，更在上面 */
+    position: relative;
+    /* 只有定位盒子才有 z-index */
+    z-index: 1;
+}
+/* 左侧 */
+.fs-inner-col1 {
+    width: 190px;
+    height: 480px;
+    background-color: #fff;
+    float: left;
+}
+.fs-inner-col1 ul {
+    margin-top: 10px;
+}
+.fs-inner-col1 ul li {
+    padding-left: 10px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0;
+}
+.fs-inner-col1 ul li:hover {
+    background-color: #d9d9d9;
+}
+.fs-inner-col1 ul li a {
+    color: #333;
+    font-size: 14px;
+}
+.fs-inner-col1 ul li a:hover {
+    color: #c81623;
+}
+.fs-inner-col1 ul li span {
+    color: #333;
+    padding: 0 2px;
+    font-size: 12px;
+}
+/* 这里暂时不要广告 */
+.fs-act {
+    height: 480px;
+    /* background: url(../images/top.png) no-repeat top center; */
+    background-size: 100% 480px;
+    /* 行内块转换 转化为行内块后就没有宽度了， 所以要写  width: 100%  因为fs-act 没内容，撑不开*/
+    /* 定位的时候一定要检查宽度 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 强制显示宽度  一定要写  position 会转化为行内块 根据内容多少定宽度， 撑开盒子*/
+    width: 100%; 
+}
+/* 给广告加链接， 点击跳转 */
+.fs-act a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 左侧 */
+
+/* 中间 */
+.fs-inner-col2 {
+    width: 590px;
+    height: 480px;
+    float: left;
+    margin-left: 10px;
+}
+/* 中间-上侧  banner */
+.fs-inner-col2-hd {
+    width: 590px;
+    height: 340px;
+    position: relative;
+}
+/* 中间图片 */
+.center-img {
+    width: 590px;
+    height: 340px;
+}
+/* banner 左右按钮 */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 35px;
+    font-family: "icomoon";
+    background: rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #fff;
+    line-height: 35px;
+    font-size: 18px;
+}
+.arrow-left {
+    left: 0;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;   
+}
+.arrow-right {
+    right: 0;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+/* banner 底部切换悬浮 */
+.fs-inner-col2-hd ol {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -90px;
+    width: 180px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+}
+.fs-inner-col2-hd ol li {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 3px 4px;
+    cursor: pointer;
+}
+/* 权重加大 */
+.fs-inner-col2-hd .current {
+    background-color: #f10215;
+}
+/* 中间-下侧 图片 */
+.fs-inner-col2-bd {
+    margin-top: 10px;
+}
+.fs-inner-col2-bd div {
+    width: 290px;
+    height: 130px;
+    float: left;
+}
+.first {
+    margin-right: 10px;
+}
+.fs-inner-col2-bd img {
+    /* 图片宽度和盒子宽度、高度一样 */
+    width: 100%;
+    height: 100%;
+}
+
+/* 中间 */
+
+/* 右侧 */
+.fs-inner-col3 {
+    width: 190px;
+    height: 480px;
+    float: right;
+}
+/* 用户模块 */
+.col3-user {
+    height: 115px;
+    background-color: #fff;
+}
+.user-info {
+    position: relative;
+    height: 70px;
+}
+/* 头像 */
+.info-avatar {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+}
+.info-avatar a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    /* 图片操作的隐藏 */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.info-avatar a img {
+    width: 100%;
+    height: 100%;
+}
+/* 登陆模块文字 */
+.info-show {
+    position: absolute;
+    top: 16px;
+    left: 74px;
+}
+.info-show a, .info-show p {
+    color: #666;
+    font-size: 12px;
+    line-height: 20px;
+}
+/* 新人福利 和 plus 会员 */
+.user-profit {
+    display: block;
+    text-align: center
+}
+/* 新人福利 */
+.user-profit a {
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #e1251b;
+    display: inline-block;
+    border-radius: 13px;
+    margin: 5px 5px;
+}
+.user-profit a:hover {
+    background: #c81623;
+    color: #fff;
+}
+/* plus 会员 */
+.user-profit .profit-plus {
+    background: #363634;
+    color: #e5d790;
+}
+
+/*  */
+.col3-news {
+    height: 149px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 15px 0;
+}
+.news-tab-hd {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
+    position: relative;
+}
+.news-tab-hd a {
+    font-size: 12px;
+    color: #747474;
+    margin: 0 4px;
+}
+.news-cx {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+.news-more {
+    position: absolute;
+    top: 6px;
+    right: 0;
+}
+.news-line {
+    width: 28px;
+    height: 2px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+    left: 2px; 
+}
+.news-tab-bd {
+    margin-top: 20px;
+}
+.news-tab-bd li a{
+    height: 23px;
+    font-size: 12px;
+    color: #747474;
+    line-height: 23px;
+}
+/* 服务模块 */
+.col3-service {
+    height: 209px;
+    width: 190px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.col3-service ul {
+    width: 195px;
+}
+/* 这里的下边框 和 有边框 通过 overflow: hidden; 切了， 把 ul 宽度设置更多*/
+.col3-service li {
+    width: 47px;
+    height: 69px;
+    float: left;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.col3-service li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.col3-service li a i {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 15px auto 8px;
+}
+.col3-service li a i img {
+    width: 24px;
+    height: 24px;
+}
+.col3-service li a p {
+    text-align: center;
+    font-size: 12px;
+    color: #747474;
+}
+
+
+/* 右侧 */

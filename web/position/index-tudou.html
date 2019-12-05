@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>土豆(隐藏显示: display)</title>
+    <style>
+        a {
+            display: block; /** 这里a 是行内元素，转化为块元素。行内元素给宽高不起作用 */
+            width: 448px;
+            height: 252px;
+            margin: 100px;
+            position: relative;
+        }
+        .mask {
+            width: 100%;
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.4) url(images/bottom.png) no-repeat center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;  /** 正常情况隐藏 */
+        }
+        /** 鼠标放到 a 上， a 里面的 mask 显示出来。 */
+        a:hover .mask {
+            display: block;  /** 显示 */
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#">
+        <img src="images/tudou.jpeg" height="252px" width="448px">
+        <div class="mask"></div>
+    </a>
+
+</body>
+</html>
